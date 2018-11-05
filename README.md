@@ -43,16 +43,19 @@ C. **What is the idf of a term that occurs in every document? Compare this with 
 
 It is 0. For a word that occurs in every document, putting it on the stop list has the same effect as idf weighting: the word is ignored.
 
-
-
 D. **Consider the following collection of four documents:**
 
 - Doc1: Shared Computer Resources
+
 - Doc2: Computer Services
+
 - Doc3: Digital Shared Components
+
 - Doc4: Computer Resources Shared Components
 
-**Assuming each word is a term:**
+
+
+  **Assuming each word is a term:**
 
 1. **What documents are retrieved, with the Boolean model, with the query “Computer AND NOT Components”?**
 
@@ -66,3 +69,43 @@ D. **Consider the following collection of four documents:**
 
 5. Compute the similarity between the query “Computer Components” and Doc4 with the cosine similarity measure.
 
+## Part 2: Evaluation in Information Retrieval
+
+F. **Consider an information need for which there are 6 relevant documents in the collection. Contrast two systems run on this collection. Their top 10 results are judged for relevance as follows (the leftmost item is the top ranked search result):**
+
+| System1 | NNNNR RRRRN |
+| ------- | ----------- |
+| System2 | NRRNR RNNNN |
+
+1. What is the Precision, Recall, and F-Measure of each system for the top 10 documents? Comment on your results.
+2. What is the MAP of each system? Which has a higher MAP?
+3. Does the result in point b intuitively make sense? What does it say about what is important in getting a good MAP score?
+4. What is the R-precision of each system? (Does it rank the systems the
+   same as MAP?)
+
+
+
+G. The following list of R’s and N’s represents relevant (R) and nonrelevant (N) returned documents in a ranked list of 20 documents retrieved in response to a query from a collection of 10,000 documents. The top of the ranked list (the document the system thinks is most likely to be relevant) is on the left of the list. This list shows 6 relevant documents. Assume that there are 8 relevant documents in total in the collection.
+
+| RRNNN NNNRN RNNNR NNNNR |
+| :---------------------: |
+|                         |
+
+1. What is the precision of the system on the top 20?
+
+2. What is the F-Measure on the top 20?
+
+3. What is the uninterpolated precision of the system at 25% recall?
+
+4. What is the interpolated precision at 33% recall?
+
+5. Assume that these 20 documents are the complete result set of the system. What is the MAP for the query?
+
+   Assume, now, instead, that the system returned the entire 10,000 documents
+   in a ranked list, and these are the first 20 results returned.
+
+6. What is the largest possible MAP that this system could have?
+
+7. What is the smallest possible MAP that this system could have?
+
+8. In a set of experiments, only the top 20 results are evaluated by hand. The result in (e) is used to approximate the range (f) to (g). For this example, how large (in absolute terms) can the error for the MAP be by calculating (e) instead of (f) and (g) for this query?
