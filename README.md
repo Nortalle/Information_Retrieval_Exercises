@@ -53,21 +53,37 @@ D. **Consider the following collection of four documents:**
 
 - Doc4: Computer Resources Shared Components
 
-
-
   **Assuming each word is a term:**
 
-1. **What documents are retrieved, with the Boolean model, with the query “Computer AND NOT Components”?**
+1. What documents are retrieved, with the Boolean model, with the query “Computer AND NOT Components”?
 
+  ```
   Doc1 and Doc2
+  ```
 
-2. **Compute the idf value of the terms “Computer” and “Components” (consider we have only these 4 documents in the collection).**
+2. Compute the idf value of the terms “Computer” and “Components” (consider we have only these 4 documents in the collection).
 
-3. **Compute the vector model representation of Doc4 using tf-idf weights (logarithmic tf * idf).**
+   ```
+   
+   ```
+
+3. Compute the vector model representation of Doc4 using tf-idf weights (logarithmic tf * idf).
+
+   ```
+   
+   ```
 
 4. Compute the vector model representation of the query “Computer Components” using only raw tf and no idf.
 
+   ```
+   
+   ```
+
 5. Compute the similarity between the query “Computer Components” and Doc4 with the cosine similarity measure.
+
+   ```
+   
+   ```
 
 ## Part 2: Evaluation in Information Retrieval
 
@@ -78,14 +94,20 @@ F. **Consider an information need for which there are 6 relevant documents in th
 | System2 | NRRNR RNNNN |
 
 1. What is the Precision, Recall, and F-Measure of each system for the top 10 documents? Comment on your results.
+
+   ```
+   
+   ```
+
 2. What is the MAP of each system? Which has a higher MAP?
+
 3. Does the result in point b intuitively make sense? What does it say about what is important in getting a good MAP score?
+
 4. What is the R-precision of each system? (Does it rank the systems the
    same as MAP?)
 
 
-
-G. The following list of R’s and N’s represents relevant (R) and nonrelevant (N) returned documents in a ranked list of 20 documents retrieved in response to a query from a collection of 10,000 documents. The top of the ranked list (the document the system thinks is most likely to be relevant) is on the left of the list. This list shows 6 relevant documents. Assume that there are 8 relevant documents in total in the collection.
+G. **The following list of R’s and N’s represents relevant (R) and nonrelevant (N) returned documents in a ranked list of 20 documents retrieved in response to a query from a collection of 10,000 documents. The top of the ranked list (the document the system thinks is most likely to be relevant) is on the left of the list. This list shows 6 relevant documents. Assume that there are 8 relevant documents in total in the collection.**
 
 | RRNNN NNNRN RNNNR NNNNR |
 | :---------------------: |
@@ -100,9 +122,6 @@ G. The following list of R’s and N’s represents relevant (R) and nonrelevant
 4. What is the interpolated precision at 33% recall?
 
 5. Assume that these 20 documents are the complete result set of the system. What is the MAP for the query?
-
-   Assume, now, instead, that the system returned the entire 10,000 documents
-   in a ranked list, and these are the first 20 results returned.
 
 6. What is the largest possible MAP that this system could have?
 
