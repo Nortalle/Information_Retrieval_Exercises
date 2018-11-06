@@ -15,9 +15,7 @@ word 2 = 2,13,44,75
 word 3 = 10,31,20,60,48.
 ```
 
-As we can see there is no document containing all three query terms. If we would have checked the
-first posting of the third list right at the beginning, we would have noticed that there is no intersection
-between the first and the third postings list. That would make any further search superfluous.
+As we can see there is no document containing all three query terms. If we would have checked the first posting of the third list right at the beginning, we would have noticed that there is no intersection between the first and the third postings list. That would make any further search superfluous.
 
 B. **How should the Boolean query x AND NOT y be handled? Why is naive evaluation of this query normally very expensive? Write out a postings merge algorithm that evaluates this query efficiently.**
 
@@ -84,6 +82,16 @@ D. **Consider the following collection of four documents:**
    ```
    
    ```
+
+E. **Compute the vector space similarity between:**
+
+1. The query: "digital cameras" and 
+2. The document: "digital cameras and video cameras" by filling out the empty columns in the table bellow.
+    - Assume total number of documents in the collection N = 10,000,000
+    - use logarithmic term weighting (wf columns) for query and document,
+    - idf weighting for the query only, and
+    - cosine normalization for the document only.
+      Treat and as a stop word. Enter term counts in the tf columns. What is the final similarity score ?
 
 ## Part 2: Evaluation in Information Retrieval
 
